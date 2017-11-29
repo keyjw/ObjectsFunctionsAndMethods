@@ -14,8 +14,9 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-    two_circles()
-    circle_and_rectangle()
+
+    # two_circles()
+    # circle_and_rectangle()
     lines()
 
 
@@ -150,8 +151,8 @@ def lines():
     """
     window = rg.RoseWindow()
 
-    line1start = rg.Point(100,200)
-    line1end = rg.Point(150,250)
+    line1start = rg.Point(150,200)
+    line1end = rg.Point(100,250)
     line1 = rg.Line(line1start,line1end)
 
     line2start = rg.Point(0,0)
@@ -159,7 +160,14 @@ def lines():
     line2 = rg.Line(line2start,line2end)
     line2.thickness = 5
 
-    line1.move_by()
+    midpoint1 = line1.get_midpoint()
+    midpoint2 = line2.get_midpoint()
+
+    line1.move_by(-75,-175)
+
+    print(line1.get_midpoint())
+    print(50)
+    print(50)
 
     line1.attach_to(window)
     line2.attach_to(window)
