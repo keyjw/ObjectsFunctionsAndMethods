@@ -74,7 +74,7 @@ def main():
     # Make the animation go much faster.
     #   First number:  bigger means faster.
     #   Second number: bigger means slower.
-    window.tracer(2, 1)
+    window.tracer(1, 1)
 
     jump_and_move_turtle(100, 50, 200, -100)
     turtle = rg.SimpleTurtle('square')
@@ -84,6 +84,7 @@ def main():
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
     try_methods()
     try_functions()
+    try_methods_and_functions()
 
     window.close_on_mouse_click()
 
@@ -259,13 +260,22 @@ def try_methods_and_functions():
         mike.draw_square(100)
         mike.left(15)
 
-    mike.speed(100)
+    mike.speed = 100
     mike.pen = rg.Pen('red', 35)
 
-    for y in range(8)
+    for y in range(8):
+        mike.draw_square(300)
+        mike.left(60)
+
+    mike.pen = rg.Pen('black', 3)
+
+    mike.backward(200)
+    mike.draw_circle(30)
+    mike.draw_square(50)
+
 
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
